@@ -1,0 +1,10 @@
+stages:
+  prepare:
+    cmd: ^
+  features:
+    cmd: python src/preprocess.py
+    deps:
+    - data/processed/clean.csv
+    - src/preprocess.py
+    outs:
+    - data/processed/features.csv
